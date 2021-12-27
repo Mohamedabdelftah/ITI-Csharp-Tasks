@@ -1,0 +1,50 @@
+using System;
+struct Program
+{
+    static void Main()
+    {
+        int odd;
+            do
+        {
+            Console.WriteLine("Write Odd Number Please :D ");
+            odd = int.Parse(Console.ReadLine());
+            Console.Clear();
+
+            if (odd % 2 != 0)
+            {
+                int row = 1;
+                int col = (odd + 1) / 2;
+                Console.SetCursorPosition(col + (col * 5), row);
+                Console.WriteLine(1);
+                for (int i = 1; i < odd * odd; i++)
+                {
+
+                    if (i % odd == 0)
+                    {
+
+                        row++;
+                        if (row > odd) { row = 1; }
+                    }
+                    else
+                    {
+                        col--;
+                        row--;
+                        if (row == 0) { row = odd; }
+                        if (col == 0) { col = odd; }
+                    }
+                    Console.SetCursorPosition(col + (col * 5), row);
+                    Console.WriteLine(i + 1);
+
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Enter odd please .");
+            }
+        } while ( odd % 2 == 0);
+       
+        Console.ReadLine();
+    }
+
+}
