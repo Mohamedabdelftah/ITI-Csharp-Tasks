@@ -1,0 +1,23 @@
+using System;
+struct Program
+{
+    static void Main()
+    {
+        First();
+        Console.ReadLine();
+    }
+
+    static int First()
+    {
+        int result = 0;
+        do
+        {
+            Console.WriteLine("Enter  number");
+            int num = int.Parse(Console.ReadLine());
+            result = result + num;
+            Console.WriteLine(result);
+        } while (result < 100);
+        return result;
+
+    }
+}
