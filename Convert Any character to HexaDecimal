@@ -1,0 +1,11 @@
+using System;
+struct Program{
+	static void Main (){
+		Console.WriteLine("Enter Any Character I will transform it to HexaDecimal :D ");
+		string x = Console.ReadLine();
+		int w = int.Parse(x);
+		Console.Write("{0:X}",w);
+		Console.ReadLine();
+	}
+	
+}
